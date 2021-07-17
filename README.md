@@ -3,6 +3,49 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+Demo
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/0ybZ4Ka9oag/0.jpg)](https://www.youtube.com/watch?v=0ybZ4Ka9oag)
+
+My inial PID parameters where 0,0,0. I used twiddle algorithm and after few hours I got optimal parameters.
+
+First I trained steering angles, then with that I trainned throttling.
+With throttling I trainned again steering. (I optimized the steering i got first time)
+I repeated that few times to get what I have now.
+
+P- current error and its proportional. Small error = small change, Big error = big change.
+
+I- sum of  all pasts errors. It can make controller react stronger if sum is large.
+
+D- possible future error.
+
+
+
+I used two PID controllers for throttle(and avg) and 1 for angle. One would be enough but It was nice experiment.
+
+
+PID parameters for steering angles:
+
+* p value: 0.18502
+* i value: 0.000324643
+* d value: 4.57675
+
+
+
+PID parameters for throttle 1:
+
+* p value: 0.609181
+* i value: 0.000
+* d value: 0.685517
+
+
+PID parameters for throttle 2:
+
+* p value: 0.609181
+* i value: 0.000
+* d value: 0.3813
+
+
 ## Dependencies
 
 * cmake >= 3.5
